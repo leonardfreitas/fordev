@@ -1,1 +1,1 @@
-export './accounts_entitiy.dart';
+export 'account_entitiy.dart';

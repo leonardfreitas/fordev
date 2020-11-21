@@ -4,6 +4,7 @@ import '../../domain/entities/entities.dart';
 import '../../domain/helpers/helpers.dart';
 import '../../domain/usecases/usecases.dart';
 
+import '../models/remote_account_model.dart';
 import '../http/http.dart';
 
 class RemoteAuthentication {
@@ -20,7 +21,7 @@ class RemoteAuthentication {
         method: 'post',
         body: body,
       );
-      return AccountEntity.fromJson(httpResponse);
+      return RemoteAccountModel.fromJson(httpResponse).toEntity();
     } on HttpError catch (error) {
       throw error == HttpError.unauthorized
           ? DomainError.invalidCredentials

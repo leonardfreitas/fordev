@@ -5,7 +5,7 @@
 1. ✅ Os campos devem começar sem exibir mensagem de erro
 2. ✅ O botão de login deve começar desabilitado
 3. Após digitar algo em um campo, a mensagem de erro deve sumir se o campo for válido
-4. Validar e-mail quando o usuário digitar no campo
+4. ✅ Validar e-mail quando o usuário digitar no campo
 5. Mostar mensagem de erro se o e-mail for inválido
 6. Remover mensagem de erro se o e-mail for válido
 7. Validar senha quando o usuário digitar no campo

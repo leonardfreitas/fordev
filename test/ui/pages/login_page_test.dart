@@ -82,6 +82,28 @@ void main() {
     emailErrorController.add(null);
     await tester.pump();
 
-    expect(find.text('any error'), findsOneWidget);
+    expect(
+      find.descendant(
+          of: find.bySemanticsLabel('E-mail'), matching: find.byType(Text)),
+      findsOneWidget,
+      reason:
+          'when a TextFormField has only one text child, means it has no errors, since one of the childs is always the label text',
+    );
+  });
+
+  testWidgets('Should present no error if emails is valid',
+      (WidgetTester tester) async {
+    await loadPage(tester);
+
+    emailErrorController.add('');
+    await tester.pump();
+
+    expect(
+      find.descendant(
+          of: find.bySemanticsLabel('E-mail'), matching: find.byType(Text)),
+      findsOneWidget,
+      reason:
+          'when a TextFormField has only one text child, means it has no errors, since one of the childs is always the label text',
+    );
   });
 }

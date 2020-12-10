@@ -9,7 +9,7 @@
 5. ✅ Mostar mensagem de erro se o e-mail for inválido
 6. ✅ Remover mensagem de erro se o e-mail for válido
 7. ✅ Validar senha quando o usuário digitar no campo
-8. Mostrar mensagem se a senha for inválida
+8. ✅ Mostrar mensagem se a senha for inválida
 9. Remover mensagem se a senha for válida
 10. Habilitar o botão de fazer login se todos os campos forem válidos
 11. Desabilitar o botão de fazer login se algum campo for inválido
